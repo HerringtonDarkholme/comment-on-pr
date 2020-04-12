@@ -19,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: comment PR
-        uses: unsplash/comment-on-pr@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          msg: "Check out this message!"
+      uses: Schniz/comment-on-pr@master
+      with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          file_path: ./.github/comment.md
+          unique_id: my-unique-id
 ```
